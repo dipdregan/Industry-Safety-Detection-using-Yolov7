@@ -1,0 +1,14 @@
+stages:
+  data_ingestion:
+    cmd: python -c "from src.components.data_ingestion import DataIngestion; DataIngestion().initiate_data_ingestion()"
+    deps:
+      - src/components/data_ingestion.py
+      - src/logger/__init__.py
+      - src/exception/__init__.py
+      - src/entity/config_entity.py
+      - src/entity/artifacts_entity.py
+      - src/configuration/s3_operations.py
+      - src/constant/training_pipeline/__init__.py
+
+
+
